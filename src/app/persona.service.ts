@@ -22,11 +22,13 @@ export class PersonaService {
   getMoyennePersona(anneDebut: string, anneFin: string): Observable<Persona> {
     return this.http.get<Persona>(this.PersonasUrl + 'persona/' + anneDebut + anneFin, httpOptions);
   }
-  addPersona(Persona: Persona): Observable<Persona> {
-    return this.http.post<Persona>(this.PersonasUrl + 'personas/', Persona, httpOptions);
+  addPersona(persona: Persona): Observable<Persona> {
+    console.log("add");
+    console.log(persona);
+    return this.http.post<Persona>(this.PersonasUrl + 'persona/', persona, httpOptions);
   }
-  updatePersona(Persona: Persona,id: number): Observable<any> {
-    return this.http.put<Persona>(this.PersonasUrl + 'persona/' + id, Persona, httpOptions);
+  updatePersona(persona: Persona,id: string): Observable<any> {
+    return this.http.put<Persona>(this.PersonasUrl + 'persona/' + id, persona, httpOptions);
   }
   deletePersona(id: number): Observable<Persona> {
       return this.http.delete<Persona>(this.PersonasUrl + 'persona/' + id, httpOptions);

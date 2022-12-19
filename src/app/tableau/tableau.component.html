@@ -1,130 +1,136 @@
 <!-- table avec la liste temperature -->
-<mat-table [dataSource]="personas" #tableTemperatures="matTable">
-    <!-- id -->
-    <ng-container matColumnDef="_id">
-      <mat-header-cell *matHeaderCellDef> id </mat-header-cell>
-      <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
-    </ng-container>
-  
+<mat-table [dataSource]="personas" #tablePersonas="matTable"> 
     <!-- lv -->
     <ng-container matColumnDef="lv">
-      <mat-header-cell *matHeaderCellDef> lv </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Lv </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.lv}} </mat-cell>
     </ng-container>
   
     <!-- nom -->
     <ng-container matColumnDef="nom">
-      <mat-header-cell *matHeaderCellDef> nom </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Nom </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.nom}} </mat-cell>
     </ng-container>
 
     <!-- arcane -->
     <ng-container matColumnDef="arcane">
-        <mat-header-cell *matHeaderCellDef> arcane </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> Arcane </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.arcane}} </mat-cell>
       </ng-container>
 
     <!-- force -->
     <ng-container matColumnDef="force">
-        <mat-header-cell *matHeaderCellDef> force </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.force}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Force </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.competance.force}} </mat-cell>
       </ng-container>
 
     <!-- magie -->
-    <ng-container matColumnDef="magie">
-        <mat-header-cell *matHeaderCellDef> magie </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.magie}} </mat-cell>
+    <ng-container matColumnDef="magique">
+        <mat-header-cell *matHeaderCellDef> Magie </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.competance.magique}} </mat-cell>
       </ng-container>
 
     <!-- agilité -->
+    <ng-container matColumnDef="endurance">
+      <mat-header-cell *matHeaderCellDef> Endurance </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.stats.competance.endurance}} </mat-cell>
+    </ng-container>
+
+    <!-- agilité -->
     <ng-container matColumnDef="agilite">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.agilite}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Agilité </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.competance.agilite}} </mat-cell>
       </ng-container>
 
     <!-- chance -->
     <ng-container matColumnDef="chance">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.chance}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Chance </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.competance.chance}} </mat-cell>
       </ng-container>
 
     <!-- physique -->
     <ng-container matColumnDef="physique">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.physique}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Physique </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.physique}} </mat-cell>
       </ng-container>
 
     <!-- fusil -->
     <ng-container matColumnDef="fusil">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.fusil}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Fusil </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.fusil}} </mat-cell>
       </ng-container>
 
     <!-- feu -->
     <ng-container matColumnDef="feu">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.feu}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Feu </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.feu}} </mat-cell>
       </ng-container>
 
     <!-- glace -->
     <ng-container matColumnDef="glace">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.glace}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Glace </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.glace}} </mat-cell>
       </ng-container>
 
     <!-- electrique -->
     <ng-container matColumnDef="electrique">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.electrique}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Électrique </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.electrique}} </mat-cell>
       </ng-container>
 
     <!-- vent -->
     <ng-container matColumnDef="vent">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.vent}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Vent </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.vent}} </mat-cell>
       </ng-container>
 
     <!-- psychique -->
     <ng-container matColumnDef="psychique">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.psychique}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Psychique </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.psychique}} </mat-cell>
       </ng-container>
 
     <!-- nucleaire -->
     <ng-container matColumnDef="nucleaire">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.nucleaire}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Nucléaire </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.nucleaire}} </mat-cell>
       </ng-container>
 
     <!-- divin -->
     <ng-container matColumnDef="divin">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.divin}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Divin </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.divin}} </mat-cell>
       </ng-container>
 
     <!-- malediction -->
     <ng-container matColumnDef="malediction">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
-        <mat-cell *matCellDef="let row"> {{row.malediction}} </mat-cell>
+        <mat-header-cell *matHeaderCellDef> Malédiction </mat-header-cell>
+        <mat-cell *matCellDef="let row"> {{row.stats.faibless.maledition}} </mat-cell>
       </ng-container>
 
     <!-- obtenue -->
     <ng-container matColumnDef="obtenue">
-        <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef> Obtenue </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.obtenue}} </mat-cell>
       </ng-container>
 
     <!-- date -->
     <ng-container matColumnDef="date">
-      <mat-header-cell *matHeaderCellDef> agilité </mat-header-cell>
+      <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
       <mat-cell *matCellDef="let row"> {{row.date}} </mat-cell>
     </ng-container>
 
-    
+    <ng-container matColumnDef="modifier">
+      <mat-header-cell *matHeaderCellDef> Modifier </mat-header-cell>
+      <mat-cell *matCellDef="let row"> <a href="/modifierPersona" class="modifier">Modifier</a> </mat-cell>
+    </ng-container>
 
-    
+    <ng-container matColumnDef="supprimer">
+      <mat-header-cell *matHeaderCellDef> Suprimer </mat-header-cell>
+      <mat-cell *matCellDef="let row"> <a href="/supprimerPersona" class="supprimer">Supprimer</a> </mat-cell>
+    </ng-container>
 
     <!-- Header and Row Declarations -->
-    <mat-header-row *matHeaderRowDef="['id', 'lv', 'nom','arcane','physique','fusil','feu','glace','electrique','vent','psychique','nucleaire','divin','malediction','obtenue','date']"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: ['id', 'lv', 'nom','arcane','physique','fusil','feu','glace','electrique','vent','psychique','nucleaire','divin','malediction','obtenue','date']"></mat-row>
-  </mat-table>
+    <mat-header-row *matHeaderRowDef="['lv', 'nom','arcane','force','magique','endurance','agilite','chance','physique','fusil','feu','glace','electrique','vent','psychique','nucleaire','divin','malediction','modifier','supprimer']"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: ['lv', 'nom','arcane','force','magique','endurance','agilite','chance','physique','fusil','feu','glace','electrique','vent','psychique','nucleaire','divin','malediction','modifier','supprimer']"></mat-row>
+</mat-table>

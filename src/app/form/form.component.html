@@ -1,0 +1,97 @@
+<form #formAjout (ngSubmit)="onSubmit()">
+    <h2>Persona</h2>
+    <label for="lv">Lv: </label>
+    <br>
+    <input name="lv" type="number" [(ngModel)]="nouvellePersona.lv" required>
+    <br>
+    <label for="nom">Nom: </label>
+    <br>
+    <input name="nom" type="text" [(ngModel)]="nouvellePersona.nom" required>
+    <br>
+    <label for="arcane">Arcane: </label>
+    <br>
+    <input name="arcane" type="text" [(ngModel)]="nouvellePersona.arcane" required>
+    <div formGroupName="stats">
+      <div formGroupName="Competance">
+        <br>
+        <h3>Competance</h3>
+        <br>
+        <label for="force">Force:</label>
+        <br>
+        <input name="force" type="number" [(ngModel)]="nouvellePersona.stats.competance.force">
+        <br>
+        <label for="magie">Magie: </label>
+        <br>
+        <input name="magie" type="number" [(ngModel)]="nouvellePersona.stats.competance.magique">
+        <br>
+        <label for="endurance">Endurance: </label>
+        <br>
+        <input name="endurance" type="number" [(ngModel)]="nouvellePersona.stats.competance.endurance">
+        <br>
+        <label for="agilite">Agilité: </label>
+        <br>
+        <input name="agilite"type="number" [(ngModel)]="nouvellePersona.stats.competance.agilite">
+        <br>
+        <label for="chance">Chance: </label>
+        <br>
+        <input name="chance"type="number" [(ngModel)]="nouvellePersona.stats.competance.chance">
+      </div>
+      <div formGroupName="faibless">
+        <br>
+        <h3>Faibless</h3>
+        <br>
+        <label for="physique">Physique:</label>
+        <br>
+        <input name="physique" type="string" [(ngModel)]="nouvellePersona.stats.faibless.physique">
+        <br>
+        <label for="fusil">Fusil: </label>
+        <br>
+        <input name="fusil" type="string" [(ngModel)]="nouvellePersona.stats.faibless.fusil">
+        <br>
+        <label for="feu">Feu: </label>
+        <br>
+        <input name="feu" type="string" [(ngModel)]="nouvellePersona.stats.faibless.feu">
+        <br>
+        <label for="glace">Glace: </label>
+        <br>
+        <input name="glace"type="string" [(ngModel)]="nouvellePersona.stats.faibless.glace">
+        <br>
+        <label for="electrique">Électrique: </label>
+        <br>
+        <input name="electrique"type="string" [(ngModel)]="nouvellePersona.stats.faibless.electrique">
+        <br>
+        <label for="vent">Vent: </label>
+        <br>
+        <input name="vent"type="string" [(ngModel)]="nouvellePersona.stats.faibless.vent">
+        <br>
+        <label for="psychique">Psychique: </label>
+        <br>
+        <input name="psychique"type="string" [(ngModel)]="nouvellePersona.stats.faibless.psychique">
+        <br>
+        <label for="nucleaire">Nucléaire: </label>
+        <br>
+        <input name="nucleaire"type="string" [(ngModel)]="nouvellePersona.stats.faibless.nucleaire">
+        <br>
+        <label for="divin">Divin: </label>
+        <br>
+        <input name="divin"type="string" [(ngModel)]="nouvellePersona.stats.faibless.divin">
+        <br>
+        <label for="malediction">Malediction: </label>
+        <br>
+        <input name="malediction"type="string" [(ngModel)]="nouvellePersona.stats.faibless.maledition">
+      </div>
+    </div>
+    <br>
+    <label for="obtenue">Obtenue: </label>
+    <br>
+    <input name="obtenue" type="boolean" [(ngModel)]="nouvellePersona.obtenue" required>
+    <br>
+    <label for="date">Date: </label>
+    <br>
+    <input name="date" type="date" [(ngModel)]="nouvellePersona.date" required>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+  
+  <!--<button type="button" (click)="updatePersona()">Modifier persona</button> -->
+  

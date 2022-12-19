@@ -1,0 +1,26 @@
+a.supprimer:link, a.supprimer:visited {
+    border-radius: 12px;
+    border: 2px solid #f44336;
+    background-color: #f44336;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a.supprimer:hover, a.supprimer:active {
+    background-color: red;
+  }
+  a.modifier:link, a.modifier:visited {
+    border-radius: 12px;
+    border: 2px solid #00c8ff;
+    background-color: #00c8ff;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a.modifier:hover, a.modifier:active {
+    background-color: blue;
+  }
