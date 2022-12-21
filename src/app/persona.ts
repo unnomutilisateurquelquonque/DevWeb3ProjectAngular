@@ -1,4 +1,5 @@
 export interface Persona {
+    _id?: string ,
     lv: number,
     nom: string,
     arcane: string,

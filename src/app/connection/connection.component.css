@@ -1,0 +1,17 @@
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+form {
+    padding: 20px 40%;
+}
+button{
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.messageErreur{
+    color:red;
+}

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ajouter-persona.component.css']
 })
 export class AjouterPersonaComponent implements OnInit {
-
+  connecter = (localStorage.getItem('connecter')=="true")
   constructor() { }
 
   ngOnInit(): void {

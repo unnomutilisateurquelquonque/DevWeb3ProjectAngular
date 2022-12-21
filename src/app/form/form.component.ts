@@ -9,6 +9,7 @@ import { PersonaService } from '../persona.service';
 })
 
 export class FormComponent {
+  messageErreur="";
   personas: Persona[] = [];
  /* personaForm = new FormGroup({
     lv: new FormControl(''),
@@ -68,7 +69,6 @@ export class FormComponent {
   constructor(private personaService: PersonaService ) {}
 
   onSubmit() {
-    console.log(this.nouvellePersona);
       this.personaService.addPersona(this.nouvellePersona)
           .subscribe(persona  => { this.personas.push(persona);});
   }

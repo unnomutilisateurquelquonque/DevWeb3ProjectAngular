@@ -1,0 +1,13 @@
+<form #formConnection (ngSubmit)="onSubmit()">
+    <h2>Connectez-vous</h2>
+    <p class="messageErreur">{{messageErreur}}</p>
+    <label for="nom">Nom: </label>
+    <br>
+    <input name="nom" type="string" [(ngModel)]="usager.nom" required>
+    <br>
+    <label for="motdepasse">Mot de passe: </label>
+    <br>
+    <input name="motdepasse" type="string" [(ngModel)]="usager.motdepasse" required>
+    <br>
+    <button type="submit">Sousmettre</button>
+</form>

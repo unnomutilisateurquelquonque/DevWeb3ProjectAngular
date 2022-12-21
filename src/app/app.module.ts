@@ -14,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 import { AjouterPersonaComponent } from './ajouter-persona/ajouter-persona.component';
 import { ModifierPersonaComponent } from './modifier-persona/modifier-persona.component';
 import { SupprimerPersonaComponent } from './supprimer-persona/supprimer-persona.component';
+import { ConnectionComponent } from './connection/connection.component';
+import { GetsComponent } from './gets/gets.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { SupprimerPersonaComponent } from './supprimer-persona/supprimer-persona
     AjouterPersonaComponent,
     ModifierPersonaComponent,
     SupprimerPersonaComponent,
+    ConnectionComponent,
+    GetsComponent,
   ],
   imports: [
     BrowserModule,

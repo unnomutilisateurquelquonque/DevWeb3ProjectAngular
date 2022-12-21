@@ -1,6 +1,10 @@
 <div>
     <mat-toolbar>
+        <a routerLink="/se-connecter">Se connecter</a>
+      <div *ngIf="connecter">
         <a routerLink="/accueil">Accueil</a>
         <a routerLink="/ajouterPersona">Ajouter Une Persona</a>
+        <a routerLink="/stats">stats</a>
+      </div>
       </mat-toolbar>
 </div>

@@ -1,5 +1,6 @@
+<div *ngIf="connecter">
 <!-- table avec la liste temperature -->
-<mat-table [dataSource]="personas" #tablePersonas="matTable"> 
+  <mat-table [dataSource]="personas" #tablePersonas="matTable"> 
     <!-- lv -->
     <ng-container matColumnDef="lv">
       <mat-header-cell *matHeaderCellDef> Lv </mat-header-cell>
@@ -122,15 +123,19 @@
 
     <ng-container matColumnDef="modifier">
       <mat-header-cell *matHeaderCellDef> Modifier </mat-header-cell>
-      <mat-cell *matCellDef="let row"> <a href="/modifierPersona" class="modifier">Modifier</a> </mat-cell>
+      <mat-cell *matCellDef="let row"> <a href="/modifierPersona" class="modifier" (click)="onModifier(row)">Modifier</a> </mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="supprimer">
       <mat-header-cell *matHeaderCellDef> Suprimer </mat-header-cell>
-      <mat-cell *matCellDef="let row"> <a href="/supprimerPersona" class="supprimer">Supprimer</a> </mat-cell>
+      <mat-cell *matCellDef="let row"> <a href="/supprimerPersona" class="supprimer" (click)="onSupprimer(row._id)">Supprimer</a> </mat-cell>
     </ng-container>
 
     <!-- Header and Row Declarations -->
     <mat-header-row *matHeaderRowDef="['lv', 'nom','arcane','force','magique','endurance','agilite','chance','physique','fusil','feu','glace','electrique','vent','psychique','nucleaire','divin','malediction','modifier','supprimer']"></mat-header-row>
     <mat-row *matRowDef="let row; columns: ['lv', 'nom','arcane','force','magique','endurance','agilite','chance','physique','fusil','feu','glace','electrique','vent','psychique','nucleaire','divin','malediction','modifier','supprimer']"></mat-row>
-</mat-table>
+  </mat-table>
+</div>
+<div *ngIf="connecter == false">
+  <h1>Vous ne possédé pas les droit d'accèss</h1>
+</div>

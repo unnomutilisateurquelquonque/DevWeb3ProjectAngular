@@ -1,14 +1,14 @@
 <form #formAjout (ngSubmit)="onSubmit()">
     <h2>Persona</h2>
-    <label for="lv">Lv: </label>
+    <label for="lv">Lv: {{lv}}</label>
     <br>
-    <input name="lv" type="number" [(ngModel)]="personaModifier.lv" required>
+    <input name="lv" type="number" [(ngModel)]="personaModifier.lv" required >
     <br>
-    <label for="nom">Nom: </label>
+    <label for="nom">Nom: {{nom}}</label>
     <br>
     <input name="nom" type="text" [(ngModel)]="personaModifier.nom" required>
     <br>
-    <label for="arcane">Arcane: </label>
+    <label for="arcane">Arcane: {{arcane}}</label>
     <br>
     <input name="arcane" type="text" [(ngModel)]="personaModifier.arcane" required>
     <div formGroupName="stats">
@@ -16,23 +16,23 @@
         <br>
         <h3>Competance</h3>
         <br>
-        <label for="force">Force:</label>
+        <label for="force">Force: {{force}}</label>
         <br>
         <input name="force" type="number" [(ngModel)]="personaModifier.stats.competance.force">
         <br>
-        <label for="magie">Magie: </label>
+        <label for="magie">Magie: {{magique}}</label>
         <br>
         <input name="magie" type="number" [(ngModel)]="personaModifier.stats.competance.magique">
         <br>
-        <label for="endurance">Endurance: </label>
+        <label for="endurance">Endurance: {{endurance}}</label>
         <br>
         <input name="endurance" type="number" [(ngModel)]="personaModifier.stats.competance.endurance">
         <br>
-        <label for="agilite">Agilité: </label>
+        <label for="agilite">Agilité: {{agilite}}</label>
         <br>
         <input name="agilite"type="number" [(ngModel)]="personaModifier.stats.competance.agilite">
         <br>
-        <label for="chance">Chance: </label>
+        <label for="chance">Chance: {{chance}}</label>
         <br>
         <input name="chance"type="number" [(ngModel)]="personaModifier.stats.competance.chance">
       </div>
@@ -40,53 +40,53 @@
         <br>
         <h3>Faibless</h3>
         <br>
-        <label for="physique">Physique:</label>
+        <label for="physique">Physique: {{physique}}</label>
         <br>
         <input name="physique" type="string" [(ngModel)]="personaModifier.stats.faibless.physique">
         <br>
-        <label for="fusil">Fusil: </label>
+        <label for="fusil">Fusil: {{fusil}}</label>
         <br>
         <input name="fusil" type="string" [(ngModel)]="personaModifier.stats.faibless.fusil">
         <br>
-        <label for="feu">Feu: </label>
+        <label for="feu">Feu: {{feu}}</label>
         <br>
         <input name="feu" type="string" [(ngModel)]="personaModifier.stats.faibless.feu">
         <br>
-        <label for="glace">Glace: </label>
+        <label for="glace">Glace: {{glace}}</label>
         <br>
         <input name="glace"type="string" [(ngModel)]="personaModifier.stats.faibless.glace">
         <br>
-        <label for="electrique">Électrique: </label>
+        <label for="electrique">Électrique: {{electrique}}</label>
         <br>
         <input name="electrique"type="string" [(ngModel)]="personaModifier.stats.faibless.electrique">
         <br>
-        <label for="vent">Vent: </label>
+        <label for="vent">Vent: {{vent}}</label>
         <br>
         <input name="vent"type="string" [(ngModel)]="personaModifier.stats.faibless.vent">
         <br>
-        <label for="psychique">Psychique: </label>
+        <label for="psychique">Psychique: {{psychique}} </label>
         <br>
         <input name="psychique"type="string" [(ngModel)]="personaModifier.stats.faibless.psychique">
         <br>
-        <label for="nucleaire">Nucléaire: </label>
+        <label for="nucleaire">Nucléaire: {{nucleaire}} </label>
         <br>
         <input name="nucleaire"type="string" [(ngModel)]="personaModifier.stats.faibless.nucleaire">
         <br>
-        <label for="divin">Divin: </label>
+        <label for="divin">Divin: {{divin}}</label>
         <br>
         <input name="divin"type="string" [(ngModel)]="personaModifier.stats.faibless.divin">
         <br>
-        <label for="malediction">Malediction: </label>
+        <label for="malediction">Malediction: {{maledition}}</label>
         <br>
         <input name="malediction"type="string" [(ngModel)]="personaModifier.stats.faibless.maledition">
       </div>
     </div>
     <br>
-    <label for="obtenue">Obtenue: </label>
+    <label for="obtenue">Obtenue: {{obtenue}}</label>
     <br>
     <input name="obtenue" type="boolean" [(ngModel)]="personaModifier.obtenue" required>
     <br>
-    <label for="date">Date: </label>
+    <label for="date">Date: {{date}}</label>
     <br>
     <input name="date" type="date" [(ngModel)]="personaModifier.date" required>
     <br>

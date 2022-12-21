@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./entete.component.css']
 })
 export class EnteteComponent implements OnInit {
-
+  connecter = (localStorage.getItem('connecter')=="true")
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,4 @@
 import { Component} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Persona } from '../persona';
 import { PersonaService } from '../persona.service';
 
@@ -10,7 +9,27 @@ import { PersonaService } from '../persona.service';
 })
 
 export class ModifierPersonaComponent {
-  leId:string = "";
+  id = localStorage.getItem('personaId');
+  nom = localStorage.getItem('personaNom');
+  lv = localStorage.getItem('personaLv');
+  arcane = localStorage.getItem('personaArcane');
+  date = localStorage.getItem('personaDate');
+  obtenue = localStorage.getItem('personaObtenue');
+  force = localStorage.getItem('personaCompetanceForce');
+  magique = localStorage.getItem('personaCompetanceMagique');
+  endurance = localStorage.getItem('personaCompetanceEndurance');
+  agilite = localStorage.getItem('personaCompetanceAgilite');
+  chance = localStorage.getItem('personaCompetanceChance');
+  physique = localStorage.getItem('personaFaiblessPhysique');
+  fusil = localStorage.getItem('personaFaiblessFusil');
+  feu = localStorage.getItem('personaFaiblessFeu');
+  glace = localStorage.getItem('personaFaiblessGlace');
+  electrique = localStorage.getItem('personaFaiblessElectrique');
+  vent = localStorage.getItem('personaFaiblessVent');
+  psychique = localStorage.getItem('personaFaiblessPsychique');
+  nucleaire = localStorage.getItem('personaFaiblesNucleaire');
+  divin = localStorage.getItem('personaFaiblessDivin');
+  maledition =  localStorage.getItem('personaFaiblessMaledition');
   personas: Persona[] = [];
  /* personaForm = new FormGroup({
     lv: new FormControl(''),
@@ -67,19 +86,18 @@ export class ModifierPersonaComponent {
     date: Date.now().toString(),
   }
 
-  constructor(private personaService: PersonaService, private route: ActivatedRoute ) {}
+  constructor(private personaService: PersonaService) {}
 
   ngOnInit() {
-    this.route.queryParams
-      .subscribe(params => {
-        console.log(params);
-        this.leId = params['id'];
-      });
+
     }
   
   onSubmit() {
+    if(this.id==null){
+      this.id = "0";
+    }
     console.log(this.personaModifier);
-      this.personaService.updatePersona(this.personaModifier,this.leId)
+      this.personaService.updatePersona(this.personaModifier,this.id)
           .subscribe(persona  => { this.personas.push(persona);});
   }
 }

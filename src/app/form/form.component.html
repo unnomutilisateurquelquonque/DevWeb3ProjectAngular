@@ -1,5 +1,6 @@
 <form #formAjout (ngSubmit)="onSubmit()">
     <h2>Persona</h2>
+    <p class="messageErreur">{{messageErreur}}</p>
     <label for="lv">Lv: </label>
     <br>
     <input name="lv" type="number" [(ngModel)]="nouvellePersona.lv" required>
