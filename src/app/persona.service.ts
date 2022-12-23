@@ -37,4 +37,16 @@ export class PersonaService {
   deletePersona(id: string): Observable<Persona> {
       return this.http.delete<Persona>(this.PersonasUrl + 'persona/' + id, httpOptions);
   }
+  getArcane(arcane : string)
+  {
+    return this.http.get<Persona>(this.PersonasUrl + 'persona/arcanes/' + arcane, httpOptions);
+  }
+  getNbArcane(arcane : string)
+  {
+    return this.http.get<Persona>(this.PersonasUrl + 'persona/arcane/' + arcane, httpOptions);
+  }
+  getNbObtenue(obtenue : string)
+  {
+    return this.http.get<Persona>(this.PersonasUrl + 'persona/obtenue/' + obtenue, httpOptions);
+  }
 }

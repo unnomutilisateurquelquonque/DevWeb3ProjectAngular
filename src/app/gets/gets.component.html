@@ -1,7 +1,7 @@
 
 <form #formGetId (ngSubmit)="getId()">
     <h2>Recherche par ID</h2>
-    <p class="messageErreur">{{messageErreur}}</p>
+    <p class="messageErreur">{{messageErreur[0]}}</p>
     <label for="id">Id: </label>
     <br>
     <input name="id" type="string" [(ngModel)]="id" required>
@@ -11,7 +11,7 @@
 
 <form #formLv (ngSubmit)="getLv()">
     <h2>Recherche des personas entre deux niveaux</h2>
-    <p class="messageErreur">{{messageErreur}}</p>
+    <p class="messageErreur">{{messageErreur[1]}}</p>
     <label for="lvMin">Level minimum: </label>
     <br>
     <input name="lvMin" type="string" [(ngModel)]="lvMin" required>
@@ -21,6 +21,37 @@
     <input name="lvMax" type="string" [(ngModel)]="lvMax" required>
     <br>
     <button type="submit">Sousmettre</button>
+</form>
+
+<form #formLv (ngSubmit)="getArcane()">
+  <h2>Trouve toute les personas d'une arcane</h2>
+  <p class="messageErreur">{{messageErreur[2]}}</p>
+  <label for="arcane">Arcane: </label>
+  <br>
+  <input name="arcane" type="string" [(ngModel)]="arcane" required>
+  <br>
+  <button type="submit">Sousmettre</button>
+</form>
+
+
+<form #formLv (ngSubmit)="getNbArcane()">
+  <h2>Compte le nombre de persona d'une arcane</h2>
+  <p class="messageErreur">{{messageErreur[3]}}</p>
+  <label for="arcane">Arcane: </label>
+  <br>
+  <input name="arcane" type="string" [(ngModel)]="arcane" required>
+  <br>
+  <button type="submit">Sousmettre</button>
+</form>
+
+<form #formLv (ngSubmit)="getNbObtenue()">
+  <h2>Compte le nombre de persona obtenue a true et compte le nombre de  persona non obtenue a false</h2>
+  <p class="messageErreur">{{messageErreur[4]}}</p>
+  <label for="obtenue" >Obtenue: </label>
+  <br>
+  <input name="obtenue" type="string" [(ngModel)]="obtenue" required>
+  <br>
+  <button type="submit">Sousmettre</button>
 </form>
 
 <div *ngIf="connecter && loadTableau">

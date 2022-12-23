@@ -7,7 +7,7 @@
     <br>
     <label for="motdepasse">Mot de passe: </label>
     <br>
-    <input name="motdepasse" type="string" [(ngModel)]="usager.motdepasse" required>
+    <input [type]="false ? 'text' : 'password'" name="motdepasse" type="string" [(ngModel)]="usager.motdepasse" required>
     <br>
     <button type="submit">Sousmettre</button>
 </form>
