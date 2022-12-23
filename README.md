@@ -29,4 +29,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Modification/AJout des features suivantes depuis la rencontre
   - message d'erreur si les champs fournit sont invalide
   - mot de passe caché
-  - ajout des requête http manquante
+  - ajout des requêtes http manquantes
