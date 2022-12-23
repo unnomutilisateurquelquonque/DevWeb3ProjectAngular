@@ -1,14 +1,16 @@
 <form #formAjout (ngSubmit)="onSubmit()">
     <h2>Persona</h2>
-    <p class="messageErreur">{{messageErreur}}</p>
+    <p class="messageErreur">{{messageErreur[0]}}</p>
     <label for="lv">Lv: </label>
     <br>
     <input name="lv" type="number" [(ngModel)]="nouvellePersona.lv" required>
     <br>
+    <p class="messageErreur">{{messageErreur[1]}}</p>
     <label for="nom">Nom: </label>
     <br>
     <input name="nom" type="text" [(ngModel)]="nouvellePersona.nom" required>
     <br>
+    <p class="messageErreur">{{messageErreur[2]}}</p>
     <label for="arcane">Arcane: </label>
     <br>
     <input name="arcane" type="text" [(ngModel)]="nouvellePersona.arcane" required>
@@ -17,6 +19,7 @@
         <br>
         <h3>Competance</h3>
         <br>
+        <p class="messageErreur">{{messageErreur[3]}}</p>
         <label for="force">Force:</label>
         <br>
         <input name="force" type="number" [(ngModel)]="nouvellePersona.stats.competance.force">
@@ -41,6 +44,7 @@
         <br>
         <h3>Faibless</h3>
         <br>
+        <p class="messageErreur">{{messageErreur[4]}}</p>
         <label for="physique">Physique:</label>
         <br>
         <input name="physique" type="string" [(ngModel)]="nouvellePersona.stats.faibless.physique">
@@ -83,6 +87,7 @@
       </div>
     </div>
     <br>
+    <p class="messageErreur">{{messageErreur[5]}}</p> 
     <label for="obtenue">Obtenue: </label>
     <br>
     <input name="obtenue" type="boolean" [(ngModel)]="nouvellePersona.obtenue" required>

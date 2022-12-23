@@ -4,6 +4,9 @@ input {
     margin: 8px 0;
     box-sizing: border-box;
   }
-  form {
+form {
     padding: 12px 20px;
-  }
+}
+.messageErreur{
+    color:red;
+}
