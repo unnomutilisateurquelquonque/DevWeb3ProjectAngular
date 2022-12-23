@@ -10,7 +10,7 @@ import * as bcrypt from 'bcryptjs';
   styleUrls: ['./connection.component.css']
 })
 export class ConnectionComponent implements OnInit {
-  showPassword: boolean= false;
+  
   messageErreur = ""
     usager : Usager = {
     nom:"",
@@ -18,7 +18,7 @@ export class ConnectionComponent implements OnInit {
   }
   Lusager : Usager = {
     nom:"maxime",
-    //motdepasse
+    //motdepasse -> motdepasse
     motdepasse:"$2a$10$LC8LBdJemNJQRL.KkoBCjOo82VBL6x.0b0iZWxVzaTTk9CaarpJnu"
   }
   constructor(private location: Location) { }
