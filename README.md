@@ -27,6 +27,6 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Modification/AJout des features suivantes depuis la rencontre
-  - message d'erreur si les champs founrit sont invalide
+  - message d'erreur si les champs fournit sont invalide
   - mot de passe caché
   - ajout des requête http manquante
