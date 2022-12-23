@@ -30,3 +30,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   - message d'erreur si les champs fournit sont invalide
   - mot de passe caché
   - ajout des requêtes http manquantes
+  - vérification des données fonction avant l'ajout, la modification et tout les requêtes dans la composante gets
